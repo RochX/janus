@@ -5,5 +5,8 @@
 *.code-workspace
 *.zip
 
+# personal notes file for convental commits
+COMMIT_TYPES.md
+
 #MacOS .DS_Store
 .DS_Store
