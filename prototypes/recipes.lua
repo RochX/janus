@@ -68,7 +68,7 @@ base_resources = {
     category="janus-shiftite",
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-alpha", amount=1}},
-    results={{type="item", name="iron-ore", amount=5}},
+    results={{type="item", name="iron-plate", amount=20}},
     order="a"
   },
   {
@@ -77,7 +77,7 @@ base_resources = {
     category="janus-shiftite",
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-beta", amount=1}},
-    results={{type="item", name="copper-ore", amount=5}},
+    results={{type="item", name="copper-plate", amount=20}},
     order="b"
   },
   {
@@ -86,7 +86,7 @@ base_resources = {
     category="janus-shiftite",
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-gamma", amount=1}},
-    results={{type="item", name="stone", amount=5}},
+    results={{type="item", name="stone", amount=20}},
     order="c"
   },
   {
@@ -104,7 +104,7 @@ base_resources = {
     category="janus-shiftite",
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-epsilon", amount=1}},
-    results={{type="item", name="coal", amount=5}},
+    results={{type="item", name="coal", amount=20}},
     order="e"
   },
   {
@@ -115,6 +115,18 @@ base_resources = {
     ingredients={{type="item", name="janus-shiftite-zeta", amount=1}},
     results={{type="fluid", name="crude-oil", amount=100}},
     order="f"
+  },
+  {
+    type="recipe",
+    name="janus-shiftite-to-concrete",
+    category="janus-shiftite",
+    subgroup="janus-basic-from-shiftite",
+    ingredients={
+      {type="item", name="janus-shiftite-alpha", amount=1},
+      {type="item", name="janus-shiftite-gamma", amount=1}
+    },
+    results={{type="item", name="concrete", amount=20}},
+    order="g"
   }
 }
 
