@@ -11,7 +11,7 @@ data:extend({
 
 -- subgroups
 -- order of this list determines order in gui
-subgroups_names = {"janus-basic-from-shiftite", "janus-transform-shiftite", "janus-time-distorter-subgroup"}
+subgroups_names = {"janus-shiftite", "janus-basic-from-shiftite", "janus-transform-shiftite", "janus-time-distorter-subgroup"}
 local function make_janus_subgroup(names)
   local t = {}
   for i,v in ipairs(names) do

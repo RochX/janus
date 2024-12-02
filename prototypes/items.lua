@@ -7,7 +7,8 @@ local function create_shiftite(ore_name, spoil_to, spoil_time)
   local shiftite_template = {
     type = "item",
     icon_size = 64,
-    stack_size = 50
+    stack_size = 50,
+    subgroup = "janus-shiftite"
   }
 
   shiftite_template.name = "janus-shiftite-"..ore_name
