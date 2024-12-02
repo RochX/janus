@@ -5,6 +5,7 @@ time_distorter = {
   {
     type="item",
     name="janus-time-distorter",
+    subgroup="janus-time-distorter-subgroup",
     icon=helper.sprite "time_distorter.png",
     icon_size=64,
     stack_size=50,
@@ -14,6 +15,7 @@ time_distorter = {
   {
     type="assembling-machine",
     name="janus-time-distorter",
+    subgroup="janus-time-distorter-subgroup",
     icon=helper.sprite "time_distorter.png",
     icon_size=64,
     crafting_speed=1,
