@@ -8,7 +8,8 @@ time_distorter = {
     subgroup="janus-time-distorter-subgroup",
     icon=helper.sprite "time_distorter.png",
     icon_size=64,
-    stack_size=50,
+    stack_size=10,
+    weight=100000,
     place_result="janus-time-distorter"
   },
   -- entity

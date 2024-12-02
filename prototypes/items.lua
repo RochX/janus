@@ -8,12 +8,13 @@ local function create_shiftite(ore_name, spoil_to, spoil_time)
     type = "item",
     icon_size = 64,
     stack_size = 50,
-    subgroup = "janus-shiftite"
+    subgroup = "janus-shiftite",
+    weight=2000
   }
 
   shiftite_template.name = "janus-shiftite-"..ore_name
   shiftite_template.icon = helper.sprite(ore_name..".png")
-  
+
   if spoil_to ~= nil then
     spoil_time = spoil_time or DEFAULT_SPOIL_TIME
 
@@ -37,3 +38,22 @@ data:extend({create_shiftite("zeta", "beta")})
 -- omega loop
 data:extend({create_shiftite("omega", "psi", 60*5)})
 data:extend({create_shiftite("psi", "omega", 60*5)})
+
+
+-- time science
+data:extend({
+  {
+    type="item",
+    name="janus-time-science",
+    subgroup="janus-time-science",
+    icons={
+      {
+        icon=helper.sprite "time_science.png",
+        icon_size=64,
+        tint={r=1,g=0,b=1, a=0.333}
+      }
+    },
+    stack_size=200,
+    weight=1000
+  }
+})

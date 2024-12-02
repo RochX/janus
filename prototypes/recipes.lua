@@ -131,3 +131,22 @@ base_resources = {
 }
 
 data:extend(base_resources)
+
+
+-- time science
+data:extend({
+  {
+    type="recipe",
+    name="janus-time-science",
+    category="janus-shiftite",
+    subgroup="janus-time-science",
+    ingredients={
+      {type="item", name="low-density-structure", amount=1},
+      {type="item", name="janus-shiftite-psi", amount=1},
+      {type="item", name="janus-shiftite-omega", amount=1}
+    },
+    results={
+      {type="item", name="janus-time-science", amount=2}
+    }
+  }
+})
