@@ -135,6 +135,24 @@ base_resources = {
 
 data:extend(base_resources)
 
+-- time distorter
+data:extend({
+  {
+    type="recipe",
+    name="janus-time-distorter",
+    subgroup="janus-time-distorter-subgroup",
+    ingredients={
+      {type="item", name="electronic-circuit", amount=30},
+      {type="item", name="advanced-circuit", amount=10},
+      {type="item", name="low-density-structure", amount=10},
+      {type="item", name="janus-shiftite-alpha", amount=20},
+      {type="item", name="janus-shiftite-beta", amount=20}
+    },
+    results={{type="item", name="janus-time-distorter", amount=1}},
+    enabled=false
+  }
+})
+
 
 -- time science
 data:extend({
