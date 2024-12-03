@@ -77,7 +77,8 @@ time_distorter = {
       {type="item", name="janus-shiftite-alpha", amount=20},
       {type="item", name="janus-shiftite-beta", amount=20}
     },
-    results={{type="item", name="janus-time-distorter", amount=1}}
+    results={{type="item", name="janus-time-distorter", amount=1}},
+    enabled=false
   }
 }
 

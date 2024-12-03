@@ -43,8 +43,8 @@ data:extend({create_shiftite("psi", "omega", 60*5)})
 -- time science
 data:extend({
   {
-    type="item",
-    name="janus-time-science",
+    type="tool",
+    name="janus-time-science-pack",
     subgroup="janus-time-science",
     icons={
       {
@@ -54,6 +54,10 @@ data:extend({
       }
     },
     stack_size=200,
-    weight=1000
+    weight=1000,
+
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value",
   }
 })

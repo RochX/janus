@@ -25,7 +25,8 @@ data:extend({
       {type="item", name="janus-shiftite-beta", amount=1},
       {type="item", name="janus-shiftite-delta", amount=1},
       {type="item", name="janus-shiftite-zeta", amount=1}
-    }
+    },
+    enabled=false
   },
   {
     type="recipe",
@@ -42,7 +43,8 @@ data:extend({
       {type="item", name="janus-shiftite-alpha", amount=1},
       {type="item", name="janus-shiftite-gamma", amount=1},
       {type="item", name="janus-shiftite-epsilon", amount=1}
-    }
+    },
+    enabled=false
   },
   {
     type="recipe",
@@ -57,7 +59,8 @@ data:extend({
       {type="item", name="janus-shiftite-epsilon", amount=1},
       {type="item", name="janus-shiftite-zeta", amount=1}
     },
-    results={{type="item", name="janus-shiftite-omega", amount=1}}
+    results={{type="item", name="janus-shiftite-omega", amount=1}},
+    enabled=false
   }
 })
 
@@ -137,7 +140,7 @@ data:extend(base_resources)
 data:extend({
   {
     type="recipe",
-    name="janus-time-science",
+    name="janus-time-science-pack",
     category="janus-shiftite",
     subgroup="janus-time-science",
     ingredients={
@@ -146,7 +149,8 @@ data:extend({
       {type="item", name="janus-shiftite-omega", amount=1}
     },
     results={
-      {type="item", name="janus-time-science", amount=2}
-    }
+      {type="item", name="janus-time-science-pack", amount=2}
+    },
+    enabled=false
   }
 })
