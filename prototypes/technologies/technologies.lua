@@ -70,10 +70,14 @@ table.insert(technologies, {
   icon = helper.sprite "time_distorter.png",
   icon_size = 64,
   effects = {
-    {
-      type = "unlock-recipe",
-      recipe = "janus-time-distorter"
-    }
+    {type = "unlock-recipe", recipe = "janus-time-distorter"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-iron"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-copper"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-stone"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-water"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-coal"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-crude-oil"},
+    {type = "unlock-recipe", recipe = "janus-shiftite-to-concrete"}
   },
   research_trigger = {
     type = "craft-item",
@@ -168,15 +172,44 @@ table.insert(technologies, {
 })
 
 -- Advanced Resources from Shiftite
--- - Requirements: (red, green, blue, white, purple, yellow, time) x 2000
+-- - Requirements: (red, green, blue, white, purple, yellow, time) x 500
 -- - Unlocks:
 --     - 2a = 20x steel
---     - a+b = green circuit
---     - a+b+z = red circuit
---     - 2a+3b+2z = blue circuit
---     - 3a+5b+2z = LDS
---     - 2z = rocket fuel
+--     - a+b = 20x green circuit
+--     - a+b+z = 20x red circuit
+--     - 2a+3b+2z = 20x blue circuit
+--     - 3a+5b+2z = 20x LDS
+--     - 2z = 20x rocket fuel
 --     - 2a+g+d = 20x refined concrete
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-advanced-from-shiftite",
+  icon = helper.sprite "alpha.png",
+  icon_size = 64,
+  effects = {
+    {type="unlock-recipe", recipe="janus-shiftite-to-steel-plate"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-electronic-circuit"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-advanced-circuit"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-processing-unit"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-low-density-structure"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-rocket-fuel"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-refined-concrete"},
+  },
+  unit = {
+    count = 500,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 60
+  },
+  prerequisites = {"janus-time-science-pack"}
+})
 
 -- Vulcanus from Shiftite
 -- - Requirements: (red, green, blue, white, purple, yellow, orange, time) x 3000

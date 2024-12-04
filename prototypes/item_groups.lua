@@ -14,6 +14,7 @@ data:extend({
 subgroups_names = {
   "janus-shiftite", 
   "janus-basic-from-shiftite",
+  "janus-advanced-from-shiftite",
   "janus-transform-shiftite", 
   "janus-time-distorter-subgroup",
   "janus-time-science",

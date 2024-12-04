@@ -72,7 +72,8 @@ base_resources = {
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-alpha", amount=1}},
     results={{type="item", name="iron-plate", amount=20}},
-    order="a"
+    order="a",
+    enabled=false
   },
   {
     type="recipe",
@@ -81,7 +82,8 @@ base_resources = {
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-beta", amount=1}},
     results={{type="item", name="copper-plate", amount=20}},
-    order="b"
+    order="b",
+    enabled=false
   },
   {
     type="recipe",
@@ -90,7 +92,8 @@ base_resources = {
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-gamma", amount=1}},
     results={{type="item", name="stone", amount=20}},
-    order="c"
+    order="c",
+    enabled=false
   },
   {
     type="recipe",
@@ -99,7 +102,8 @@ base_resources = {
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-delta", amount=1}},
     results={{type="fluid", name="water", amount=100}},
-    order="d"
+    order="d",
+    enabled=false
   },
   {
     type="recipe",
@@ -108,7 +112,8 @@ base_resources = {
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-epsilon", amount=1}},
     results={{type="item", name="coal", amount=20}},
-    order="e"
+    order="e",
+    enabled=false
   },
   {
     type="recipe",
@@ -117,7 +122,8 @@ base_resources = {
     subgroup="janus-basic-from-shiftite",
     ingredients={{type="item", name="janus-shiftite-zeta", amount=1}},
     results={{type="fluid", name="crude-oil", amount=100}},
-    order="f"
+    order="f",
+    enabled=false
   },
   {
     type="recipe",
@@ -129,11 +135,77 @@ base_resources = {
       {type="item", name="janus-shiftite-gamma", amount=1}
     },
     results={{type="item", name="concrete", amount=20}},
-    order="g"
+    order="g",
+    enabled=false
   }
 }
 
 data:extend(base_resources)
+
+-- advanced recipes
+-- shiftite = {alpha = int, beta = int, gamma = int, etc}
+local function shiftite_to_X_recipe(params)
+  shiftite = params.shiftite
+  results = params.results
+  subgroup = params.subgroup
+
+  shiftite_ingredients = {}
+  for k, v in pairs(shiftite) do
+    table.insert(shiftite_ingredients, {type="item", name="janus-shiftite-"..k, amount=v})
+  end
+
+  results.type = results.type or "item"
+
+  return {
+    type = "recipe",
+    name = "janus-shiftite-to-" .. results.name,
+    category = "janus-shiftite",
+    subgroup = subgroup,
+    ingredients = shiftite_ingredients,
+    results = {results},
+    enabled = false
+  }
+end
+
+advanced_resources = {
+  shiftite_to_X_recipe({
+    shiftite={alpha=2}, 
+    results={name="steel-plate", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={alpha=1, beta=1}, 
+    results={name="electronic-circuit", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={alpha=1, beta=1, zeta=1}, 
+    results={name="advanced-circuit", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={alpha=2, beta=3, zeta=2}, 
+    results={name="processing-unit", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={alpha=3, beta=5, zeta=2}, 
+    results={name="low-density-structure", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={zeta=2}, 
+    results={name="rocket-fuel", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={alpha=2, gamma=1, delta=1}, 
+    results={name="refined-concrete", amount=20},
+    subgroup="janus-advanced-from-shiftite"
+  }),
+}
+
+data:extend(advanced_resources)
 
 -- time distorter
 data:extend({
