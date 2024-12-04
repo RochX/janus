@@ -42,6 +42,9 @@ shiftite_ore.stages = {
   }
 }
 
+-- subgroup
+shiftite_ore.subgroup = "janus-planet-info"
+
 -- after all modifications add shiftite ore
 data:extend({shiftite_ore})
 
