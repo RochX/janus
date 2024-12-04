@@ -1,6 +1,6 @@
 local helper = require("__janus__.prototypes.helper")
 
-local DEFAULT_SPOIL_TIME = 60*2
+local DEFAULT_SPOIL_TIME = 60*30
 
 local function create_shiftite(ore_name, spoil_to, spoil_time)
 
@@ -36,5 +36,5 @@ data:extend({create_shiftite("delta", "zeta")})
 data:extend({create_shiftite("zeta", "beta")})
 
 -- omega loop
-data:extend({create_shiftite("omega", "psi", 60*5)})
-data:extend({create_shiftite("psi", "omega", 60*5)})
+data:extend({create_shiftite("omega", "psi", 60*60)})
+data:extend({create_shiftite("psi", "omega", 60*60)})
