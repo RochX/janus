@@ -1,14 +1,14 @@
 -- item groups
 require("__janus__.prototypes.item_groups")
 
--- entities
-require("__janus__.prototypes.entities.time_distorter")
-require("__janus__.prototypes.entities.shiftite-ore")
-
 -- items
 require("__janus__.prototypes.items.shiftite")
 require("__janus__.prototypes.items.time_distorter")
 require("__janus__.prototypes.items.time_science")
+
+-- entities
+require("__janus__.prototypes.entities.time_distorter")
+require("__janus__.prototypes.entities.shiftite-ore")
 
 -- planet
 require("__janus__.prototypes.planets.janus")

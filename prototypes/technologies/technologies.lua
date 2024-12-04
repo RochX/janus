@@ -1,6 +1,48 @@
 local helper = require("__janus__.prototypes.helper")
 -- Technologies:
 technologies = {}
+
+-- Planet Discovery Janus
+table.insert(technologies, {
+  type = "technology",
+  name = "planet-discovery-janus",
+  icon_size = 256,
+  icons = {
+    {
+      icon = helper.sprite "planet_icon.png",
+      icon_size = 1024
+    },
+    {
+      icon = "__core__/graphics/icons/technology/constants/constant-planet.png",
+      icon_size = 128,
+      scale = 0.5,
+      shift = {
+        50,
+        50
+      }
+    }
+  },
+  effects = {
+    {
+      space_location = "janus",
+      type = "unlock-space-location",
+      use_icon_overlay_constant = true
+    },
+  },
+  unit = {
+    count = 1000,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+    },
+    time = 60
+  },
+  prerequisites = {"space-platform-thruster"},
+  essential = true
+})
+
 -- Basic oil from shiftite
 -- - Requirements: obtain epsilon zeta
 -- - Unlocks crude oil from zeta: 
@@ -12,7 +54,7 @@ technologies = {}
 
 
 -- Time Distorter
--- - Requirements: obtain epsilon shiftite
+-- - Requirements: obtain epsilon alpha
 -- - Unlocks Time Distorter building, crafted using 30x electronic circuits, 10x advanced circuits, 10x LDS, 20x α, 20x β
 -- - Unlocks basic resources from shiftite
 --     - α —> 20x iron plate
@@ -36,7 +78,8 @@ table.insert(technologies, {
   research_trigger = {
     type = "craft-item",
     item = "janus-shiftite-alpha"
-  }
+  },
+  prerequisites = {"planet-discovery-janus"}
 })
 
 -- Shiftite Omega
@@ -84,7 +127,8 @@ table.insert(technologies, {
     type = "craft-item",
     item = "janus-shiftite-omega"
   },
-  prerequisites = {"janus-shiftite-omega"}
+  prerequisites = {"janus-shiftite-omega"},
+  essential = true
 })
 
 -- Phase Change
@@ -158,5 +202,10 @@ table.insert(technologies, {
 --     - o+z+yellow = 2yellow
 -- - This needs some rebalancing… (esp for red/green)
 
+
+-- ordering
+for i, tech in pairs(technologies) do
+  tech.order = tostring(i)
+end
 
 data:extend(technologies)
