@@ -217,11 +217,60 @@ table.insert(technologies, {
 --     - o+5a+2e = 20x tungsten carbide
 --     - o+6a = 20x tungsten plate
 --     - p = 20x calcite
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-shiftite-to-vulcanus",
+  icon = "__space-age__/graphics/icons/tungsten-plate.png",
+  effects = {
+    {type="unlock-recipe", recipe="janus-shiftite-to-calcite"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-tungsten-carbide"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-tungsten-plate"}
+  },
+  unit = {
+    count = 3000,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"metallurgic-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 60
+  },
+  prerequisites = {"metallurgic-science-pack", "janus-advanced-from-shiftite"}
+})
 
 -- Fulgora from Shiftite
 -- - Requirements: (red, green, blue, white, purple, yellow, pink, time) x 3000
 -- - Unlocks:
---     - p+g+d = 5x holminum plates
+--     - p+g+d = 20x holminum plates
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-shiftite-to-fulgora",
+  icon = "__space-age__/graphics/icons/holmium-plate.png",
+  effects = {
+    {type="unlock-recipe", recipe="janus-shiftite-to-holmium-plate"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-scrap"}
+  },
+  unit = {
+    count = 3000,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"electromagnetic-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 60
+  },
+  prerequisites = {"electromagnetic-science-pack", "janus-advanced-from-shiftite"}
+})
 
 -- Simple Science Replication
 -- - Requirements: (red, green, blue, white, purple, yellow, time) x 1000

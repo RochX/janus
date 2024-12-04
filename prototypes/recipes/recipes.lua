@@ -169,43 +169,75 @@ end
 
 advanced_resources = {
   shiftite_to_X_recipe({
-    shiftite={alpha=2}, 
+    shiftite={alpha=2},
     results={name="steel-plate", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
   shiftite_to_X_recipe({
-    shiftite={alpha=1, beta=1}, 
+    shiftite={alpha=1, beta=1},
     results={name="electronic-circuit", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
   shiftite_to_X_recipe({
-    shiftite={alpha=1, beta=1, zeta=1}, 
+    shiftite={alpha=1, beta=1, zeta=1},
     results={name="advanced-circuit", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
   shiftite_to_X_recipe({
-    shiftite={alpha=2, beta=3, zeta=2}, 
+    shiftite={alpha=2, beta=3, zeta=2},
     results={name="processing-unit", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
   shiftite_to_X_recipe({
-    shiftite={alpha=3, beta=5, zeta=2}, 
+    shiftite={alpha=3, beta=5, zeta=2},
     results={name="low-density-structure", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
   shiftite_to_X_recipe({
-    shiftite={zeta=2}, 
+    shiftite={zeta=2},
     results={name="rocket-fuel", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
   shiftite_to_X_recipe({
-    shiftite={alpha=2, gamma=1, delta=1}, 
+    shiftite={alpha=2, gamma=1, delta=1},
     results={name="refined-concrete", amount=20},
     subgroup="janus-advanced-from-shiftite"
   }),
 }
 
 data:extend(advanced_resources)
+
+interplanetary_resources = {
+  -- vulcanus
+  shiftite_to_X_recipe({
+    shiftite={omega=1, alpha=5, epsilon=2},
+    results={name="tungsten-carbide", amount=20},
+    subgroup="janus-interplanetary-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={omega=1, alpha=6},
+    results={name="tungsten-plate", amount=20},
+    subgroup="janus-interplanetary-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={psi=1},
+    results={name="calcite", amount=20},
+    subgroup="janus-interplanetary-from-shiftite"
+  }),
+  -- fulgora
+  shiftite_to_X_recipe({
+    shiftite={psi=1},
+    results={name="scrap", amount=200},
+    subgroup="janus-interplanetary-from-shiftite"
+  }),
+  shiftite_to_X_recipe({
+    shiftite={psi=1, gamma=1, delta=1},
+    results={name="holmium-plate", amount=20},
+    subgroup="janus-interplanetary-from-shiftite"
+  }),
+}
+
+data:extend(interplanetary_resources)
 
 -- time distorter
 data:extend({
