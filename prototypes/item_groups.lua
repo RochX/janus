@@ -19,6 +19,7 @@ subgroups_names = {
   "janus-transform-shiftite", 
   "janus-time-distorter-subgroup",
   "janus-time-science",
+  "janus-science-replication",
   "janus-planet-info"
 }
 local function make_janus_subgroup(names)

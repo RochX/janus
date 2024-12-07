@@ -144,6 +144,8 @@ data:extend(base_resources)
 
 -- advanced recipes
 -- shiftite = {alpha = int, beta = int, gamma = int, etc}
+-- results = {name=ITEM, amount=A}
+-- subgroup = string
 local function shiftite_to_X_recipe(params)
   shiftite = params.shiftite
   results = params.results
@@ -163,7 +165,8 @@ local function shiftite_to_X_recipe(params)
     subgroup = subgroup,
     ingredients = shiftite_ingredients,
     results = {results},
-    enabled = false
+    enabled = false,
+    result_is_always_fresh = true
   }
 end
 
@@ -275,4 +278,76 @@ data:extend({
     },
     enabled=false
   }
+})
+
+-- science replication
+-- shiftite = {alpha = int, beta = int, gamma = int, etc}
+-- results = {name=ITEM, amount=A}
+-- subgroup = string
+local function science_replication_recipe(params)
+  -- get initial recipe
+  recipe = shiftite_to_X_recipe(params)
+
+  -- add one of result to input
+  for _, result_item in pairs(recipe.results) do
+    table.insert(recipe.ingredients, {type="item", name=result_item.name, amount=1})
+  end
+
+  return recipe
+end
+
+-- science replication recipes
+data:extend({
+  science_replication_recipe({
+    shiftite = {alpha=1, beta=1},
+    results = {name="automation-science-pack", amount=10},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {alpha=2, beta=1},
+    results = {name="logistic-science-pack", amount=10},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {alpha=2, beta=1, gamma=1, epsilon=1},
+    results = {name="military-science-pack", amount=10},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {alpha=2, beta=2, epsilon=1, zeta=1},
+    results = {name="chemical-science-pack", amount=10},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {alpha=4, beta=2, gamma=4, zeta=2},
+    results = {name="production-science-pack", amount=7},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {alpha=1, beta=1},
+    results = {name="utility-science-pack", amount=7},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {alpha=1, beta=1, delta=1},
+    results = {name="space-science-pack", amount=7},
+    subgroup = "janus-science-replication"
+  }),
+
+  -- planetary sciences
+  science_replication_recipe({
+    shiftite = {psi=1, gamma=1, delta=1},
+    results = {name="agricultural-science-pack", amount=2},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {psi=1, alpha=1, beta=1},
+    results = {name="electromagnetic-science-pack", amount=2},
+    subgroup = "janus-science-replication"
+  }),
+  science_replication_recipe({
+    shiftite = {psi=1, epsilon=1, zeta=1},
+    results = {name="metallurgic-science-pack", amount=2},
+    subgroup = "janus-science-replication"
+  })
 })

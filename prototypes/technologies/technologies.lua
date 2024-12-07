@@ -275,18 +275,96 @@ table.insert(technologies, {
 -- Simple Science Replication
 -- - Requirements: (red, green, blue, white, purple, yellow, time) x 1000
 -- - Unlocks:
---     - o+a+red = 2red
---     - o+b+green = 2green
---     - o+g+blue = 2blue
---     - o+g+gray = 2gray
---     - o+d+white = 2white
---     - o+e+purple = 2purple
---     - o+z+yellow = 2yellow
--- - This needs some rebalancing… (esp for red/green)
+--     - science replication for red, green, blue, white, purple, yellow
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-simple-science-replication",
+  icons = {
+    {
+      icon = "__base__/graphics/technology/automation-science-pack.png",
+      icon_size = 256
+    },
+    {
+      icon = helper.sprite "janus-shiftite-ore-icon.png",
+      icon_size = 64,
+      scale = 1,
+      shift = {32, 32}
+    }
+  },
+  effects = {
+    {type="unlock-recipe", recipe="janus-shiftite-to-automation-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-logistic-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-military-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-chemical-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-production-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-utility-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-space-science-pack"}
+  },
+  unit = {
+    count = 1000,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 60
+  },
+  prerequisites = {"janus-time-science-pack"}
+})
 
+-- Planetary Science Replication
+-- Requirements - (red, green, blue, white, purple, yellow, orange, pink, lime, time) x 2000
+-- - Unlocks:
+-- - p+e+z+orange = 2orange
+-- - p+a+b+pink = 2pink
+-- - p+g+d+lime = 2lime (always fresh!)
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-planetary-science-replication",
+  icons = {
+    {
+      icon = "__space-age__/graphics/technology/agricultural-science-pack.png",
+      icon_size = 256
+    },
+    {
+      icon = helper.sprite "janus-shiftite-ore-icon.png",
+      icon_size = 64,
+      scale = 1,
+      shift = {32, 32}
+    }
+  },
+  effects = {
+    {type="unlock-recipe", recipe="janus-shiftite-to-agricultural-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-electromagnetic-science-pack"},
+    {type="unlock-recipe", recipe="janus-shiftite-to-metallurgic-science-pack"}
+  },
+  unit = {
+    count = 2000,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"agricultural-science-pack", 1},
+      {"electromagnetic-science-pack", 1},
+      {"metallurgic-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 60
+  },
+  prerequisites = {"janus-time-science-pack", "janus-simple-science-replication"}
+})
 
 -- ordering
-for i, tech in pairs(technologies) do
+for i, tech in ipairs(technologies) do
   tech.order = tostring(i)
 end
 
