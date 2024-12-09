@@ -15,6 +15,7 @@ data:extend({
     },
     stack_size=200,
     weight=1000,
+    order = "a[time-science-pack]",
 
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",

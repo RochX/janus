@@ -261,15 +261,29 @@ data:extend({
 })
 
 
--- time science
+-- time science and containment unit
 data:extend({
+  {
+    type = "recipe",
+    name = "janus-containment-unit",
+    subgroup = "janus-time-science",
+    ingredients = {
+      {type = "item", name = "low-density-structure", amount=1},
+      {type = "item", name = "processing-unit", amount=1},
+      {type = "item", name = "battery", amount=1}
+    },
+    results = {
+      {type = "item", name = "janus-containment-unit", amount=1}
+    },
+    enabled = false
+  },
   {
     type="recipe",
     name="janus-time-science-pack",
     category="janus-shiftite",
     subgroup="janus-time-science",
     ingredients={
-      {type="item", name="low-density-structure", amount=1},
+      {type="item", name="janus-containment-unit", amount=1},
       {type="item", name="janus-shiftite-psi", amount=1},
       {type="item", name="janus-shiftite-omega", amount=1}
     },

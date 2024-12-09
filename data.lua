@@ -2,6 +2,7 @@
 require("__janus__.prototypes.item_groups")
 
 -- items
+require("__janus__.prototypes.items.containment_unit")
 require("__janus__.prototypes.items.shiftite")
 require("__janus__.prototypes.items.time_distorter")
 require("__janus__.prototypes.items.time_science")

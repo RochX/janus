@@ -125,6 +125,10 @@ table.insert(technologies, {
     {
       type = "unlock-recipe",
       recipe = "janus-time-science-pack"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "janus-containment-unit"
     }
   },
   research_trigger = {
