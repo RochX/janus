@@ -64,6 +64,18 @@ data:extend({
   }
 })
 
+data:extend({
+  {
+    type = "recipe",
+    name = "janus-simple-oil",
+    category = "chemistry",
+    subgroup = "janus-simple-oil",
+    ingredients={{type="item", name="janus-shiftite-zeta", amount=5}},
+    results={{type="fluid", name="crude-oil", amount=50}},
+    enabled=false
+  }
+})
+
 base_resources = {
   {
     type="recipe",

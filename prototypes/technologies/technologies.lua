@@ -46,11 +46,21 @@ table.insert(technologies, {
 -- Basic oil from shiftite
 -- - Requirements: obtain epsilon zeta
 -- - Unlocks crude oil from zeta: 
---     - 5 zeta —> 100 crude oil
--- technologies.insert({
---   type="technology",
---   name="janus-simple-oil"
--- })
+--     - 5 zeta —> 50 crude oil
+table.insert(technologies, {
+  type="technology",
+  name="janus-simple-oil",
+  icon = helper.sprite "zeta.png",
+  icon_size = 64,
+  effects = {
+    {type = "unlock-recipe", recipe = "janus-simple-oil"}
+  },
+  research_trigger = {
+    type = "craft-item",
+    item = "janus-shiftite-alpha"
+  },
+  prerequisites = {"planet-discovery-janus"}
+})
 
 
 -- Time Distorter

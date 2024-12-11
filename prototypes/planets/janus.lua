@@ -16,7 +16,8 @@ janus_map_gen_settings = function()
               frequency = 1.0,
               size = 1.0,
               richness = 1.0
-            }
+            },
+            ["janus-big-rock"] = {}
           }
       }
     }

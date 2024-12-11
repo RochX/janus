@@ -10,6 +10,7 @@ require("__janus__.prototypes.items.time_science")
 -- entities
 require("__janus__.prototypes.entities.time_distorter")
 require("__janus__.prototypes.entities.shiftite-ore")
+require("__janus__.prototypes.entities.janus_rocks")
 
 -- planet
 require("__janus__.prototypes.planets.janus")

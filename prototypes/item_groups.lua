@@ -12,7 +12,8 @@ data:extend({
 -- subgroups
 -- order of this list determines order in gui
 subgroups_names = {
-  "janus-shiftite", 
+  "janus-shiftite",
+  "janus-simple-oil",
   "janus-basic-from-shiftite",
   "janus-advanced-from-shiftite",
   "janus-interplanetary-from-shiftite",
