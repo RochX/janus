@@ -6,14 +6,24 @@ local function create_shiftite(ore_name, spoil_to, spoil_time)
 
   local shiftite_template = {
     type = "item",
-    icon_size = 64,
     stack_size = 50,
     subgroup = "janus-shiftite",
-    weight=2000
+    weight=2000,
+
+    -- icon layering
+    icons = {
+      {
+        icon = helper.sprite "janus-shiftite-ore-icon.png",
+        icon_size = 64
+      },
+      {
+        icon = helper.sprite(ore_name..".png"),
+        icon_size = 64
+      }
+    }
   }
 
   shiftite_template.name = "janus-shiftite-"..ore_name
-  shiftite_template.icon = helper.sprite(ore_name..".png")
 
   if spoil_to ~= nil then
     spoil_time = spoil_time or DEFAULT_SPOIL_TIME
