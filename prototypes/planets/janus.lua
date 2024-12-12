@@ -49,8 +49,7 @@ janus_connection = {
   from = "nauvis",
   to = "janus",
   asteroid_spawn_definitions = nauvis_fulgora_asteroids,
-  icon = helper.sprite "planet_icon.png",
-  icon_size = 1024,
+  -- no need for icon since __space-age__/data-updates.lua in automatically generates icons for space connections
   length = 15000
 }
 
