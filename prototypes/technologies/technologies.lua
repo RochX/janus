@@ -50,8 +50,8 @@ table.insert(technologies, {
 table.insert(technologies, {
   type="technology",
   name="janus-simple-oil",
-  icon = helper.sprite "zeta.png",
-  icon_size = 64,
+  icon = helper.sprite "zeta-hd.png",
+  icon_size = 500,
   effects = {
     {type = "unlock-recipe", recipe = "janus-simple-oil"}
   },
@@ -102,8 +102,8 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-shiftite-omega",
-  icon = helper.sprite "omega.png",
-  icon_size = 64,
+  icon = helper.sprite "omega-hd.png",
+  icon_size = 500,
   effects = {
     {
       type = "unlock-recipe",
@@ -159,8 +159,8 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-phase-change",
-  icon = helper.sprite "alpha.png",
-  icon_size = 64,
+  icon = helper.sprite "alpha-hd.png",
+  icon_size = 500,
   effects = {
     {
       type = "unlock-recipe",
@@ -198,8 +198,8 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-advanced-from-shiftite",
-  icon = helper.sprite "alpha.png",
-  icon_size = 64,
+  icon = helper.sprite "alpha-hd.png",
+  icon_size = 500,
   effects = {
     {type="unlock-recipe", recipe="janus-shiftite-to-steel-plate"},
     {type="unlock-recipe", recipe="janus-shiftite-to-electronic-circuit"},
@@ -234,7 +234,7 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-shiftite-to-vulcanus",
-  icon = "__space-age__/graphics/icons/tungsten-plate.png",
+  icons = helper.technology_icon_constant_shiftite("__space-age__/graphics/technology/vulcanus.png"),
   effects = {
     {type="unlock-recipe", recipe="janus-shiftite-to-calcite"},
     {type="unlock-recipe", recipe="janus-shiftite-to-tungsten-carbide"},
@@ -264,10 +264,10 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-shiftite-to-fulgora",
-  icon = "__space-age__/graphics/icons/holmium-plate.png",
+  icons = helper.technology_icon_constant_shiftite("__space-age__/graphics/technology/fulgora.png"),
   effects = {
     {type="unlock-recipe", recipe="janus-shiftite-to-holmium-plate"},
-    {type="unlock-recipe", recipe="janus-shiftite-to-scrap"}
+    -- {type="unlock-recipe", recipe="janus-shiftite-to-scrap"}
   },
   unit = {
     count = 3000,
@@ -293,18 +293,7 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-simple-science-replication",
-  icons = {
-    {
-      icon = "__base__/graphics/technology/automation-science-pack.png",
-      icon_size = 256
-    },
-    {
-      icon = helper.sprite "janus-shiftite-ore-icon.png",
-      icon_size = 64,
-      scale = 1,
-      shift = {32, 32}
-    }
-  },
+  icons = helper.technology_icon_constant_shiftite("__base__/graphics/technology/automation-science-pack.png"),
   effects = {
     {type="unlock-recipe", recipe="janus-shiftite-to-automation-science-pack"},
     {type="unlock-recipe", recipe="janus-shiftite-to-logistic-science-pack"},
@@ -340,18 +329,7 @@ table.insert(technologies, {
 table.insert(technologies, {
   type = "technology",
   name = "janus-planetary-science-replication",
-  icons = {
-    {
-      icon = "__space-age__/graphics/technology/agricultural-science-pack.png",
-      icon_size = 256
-    },
-    {
-      icon = helper.sprite "janus-shiftite-ore-icon.png",
-      icon_size = 64,
-      scale = 1,
-      shift = {32, 32}
-    }
-  },
+  icons = helper.technology_icon_constant_shiftite("__space-age__/graphics/technology/agricultural-science-pack.png"),
   effects = {
     {type="unlock-recipe", recipe="janus-shiftite-to-agricultural-science-pack"},
     {type="unlock-recipe", recipe="janus-shiftite-to-electromagnetic-science-pack"},

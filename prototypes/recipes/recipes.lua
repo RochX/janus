@@ -240,11 +240,11 @@ interplanetary_resources = {
     subgroup="janus-interplanetary-from-shiftite"
   }),
   -- fulgora
-  shiftite_to_X_recipe({
-    shiftite={psi=1},
-    results={name="scrap", amount=200},
-    subgroup="janus-interplanetary-from-shiftite"
-  }),
+  -- shiftite_to_X_recipe({
+  --   shiftite={psi=1},
+  --   results={name="scrap", amount=200},
+  --   subgroup="janus-interplanetary-from-shiftite"
+  -- }),
   shiftite_to_X_recipe({
     shiftite={psi=1, gamma=1, delta=1},
     results={name="holmium-plate", amount=20},

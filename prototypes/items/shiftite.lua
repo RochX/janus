@@ -2,10 +2,23 @@ local helper = require("__janus__.prototypes.helper")
 
 local DEFAULT_SPOIL_TIME = 60*30
 
+local shiftite_order = {
+  alpha = "a",
+  beta = "b",
+  gamma = "c",
+  delta = "d",
+  epsilon = "e",
+  zeta = "f",
+  psi = "y",
+  omega = "z"
+}
+
 local function create_shiftite(ore_name, spoil_to, spoil_time)
 
   local shiftite_template = {
     type = "item",
+    name = "janus-shiftite-"..ore_name,
+    order = shiftite_order[ore_name],
     stack_size = 50,
     subgroup = "janus-shiftite",
     weight=2000,
@@ -22,8 +35,6 @@ local function create_shiftite(ore_name, spoil_to, spoil_time)
       }
     }
   }
-
-  shiftite_template.name = "janus-shiftite-"..ore_name
 
   if spoil_to ~= nil then
     spoil_time = spoil_time or DEFAULT_SPOIL_TIME
