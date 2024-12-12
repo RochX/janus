@@ -13,3 +13,11 @@ for _, lab in pairs(data.raw.lab) do
       table.insert(lab.inputs, "janus-time-science-pack")
   end
 end
+
+-- add time science to final technologies
+local science_to_update = {"promethium-science-pack", "research-productivity"}
+
+for _, tech in pairs(science_to_update) do
+  table.insert(data.raw["technology"][tech].unit.ingredients, {"janus-time-science-pack", 1})
+  table.insert(data.raw["technology"][tech].prerequisites, "janus-time-science-pack")
+end
