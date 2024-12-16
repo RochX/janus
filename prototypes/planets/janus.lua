@@ -12,13 +12,16 @@ janus_map_gen_settings = function()
     autoplace_settings = {
       ["entity"] = {
           settings = {
-            ["janus-shiftite-ore"] = {
-              frequency = 1.0,
-              size = 1.0,
-              richness = 1.0
-            },
+            ["janus-shiftite-ore"] = {},
             ["janus-big-rock"] = {}
           }
+      },
+      ["tile"] = {
+        settings = {
+          ["dirt-1"] = {},
+          ["dirt-2"] = {},
+          ["dirt-3"] = {}
+        }
       }
     }
   }
