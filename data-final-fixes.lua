@@ -21,3 +21,35 @@ for _, tech in pairs(science_to_update) do
   table.insert(data.raw["technology"][tech].unit.ingredients, {"janus-time-science-pack", 1})
   table.insert(data.raw["technology"][tech].prerequisites, "janus-time-science-pack")
 end
+
+
+
+-- add the shiftite ore collision layer to all buildable entities
+collision_mask_defaults = require("collision-mask-defaults")
+shiftite_collision_exceptions = {"mining-drill", "character"}
+
+for k, _ in pairs(defines.prototypes['entity']) do
+  -- skip exceptions
+  if contains(shiftite_collision_exceptions, k) then
+    goto continue
+  end
+
+  if data.raw[k] then
+    -- loop through each entity of type k
+    for _, v in pairs(data.raw[k]) do
+      log(v.name)
+
+      -- add shiftite layer to existing collision_mask if one exists
+      if v.collision_mask then
+        log("Modified collision mask of "..v.name)
+        v.collision_mask.layers["janus_shiftite_layer"] = true
+      -- otherwise add shiftite layer to the default layer
+      elseif collision_mask_defaults[k] then
+        log("Modified default collision mask of "..v.name)
+        v.collision_mask = collision_mask_defaults[k]
+        v.collision_mask.layers["janus_shiftite_layer"] = true
+      end
+    end
+  end
+    ::continue::
+end

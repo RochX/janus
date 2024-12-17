@@ -1,5 +1,12 @@
 local helper = require("__janus__.prototypes.helper")
 
+data:extend({
+  {
+    type = "collision-layer",
+    name = "janus_shiftite_layer"
+  }
+})
+
 shiftite_ore = {
   type = "resource",
   name = "janus-shiftite-ore",
@@ -32,7 +39,9 @@ shiftite_ore = {
       variation_count = 8,
       width = 128
     }
-  }
+  },
+
+  collision_mask = {layers = {resource=true, janus_shiftite_layer=true}}
 }
 
 -- autoplace
