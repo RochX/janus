@@ -64,7 +64,8 @@ shiftite_ore.autoplace = {
     input_scale = 1/(6.5*"..shiftite_size.."), output_scale = 6.5*"..shiftite_size.."}, 0, 1)",
   richness_expression = "max(vulcanus_coal_richness, gleba_stone_richness, \z 
     random_penalty{x=x, y=y, seed=map_seed, source=distance+200, amplitude=100} \z
-    )*"..shiftite_richness
+    )*"..shiftite_richness,
+  -- tile_restriction = {"janus-shiftite-tile"}
 }
 -- after all modifications add shiftite ore
 data:extend({shiftite_ore})
@@ -79,3 +80,5 @@ data:extend({
     category = "resource"
   }
 })
+
+return shiftite_ore

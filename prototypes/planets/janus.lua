@@ -20,7 +20,8 @@ janus_map_gen_settings = function()
         settings = {
           ["dirt-1"] = {},
           ["dirt-2"] = {},
-          ["dirt-3"] = {}
+          ["dirt-3"] = {},
+          -- ["janus-shiftite-tile"] = {}
         }
       }
     }

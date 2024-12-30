@@ -7,6 +7,9 @@ require("__janus__.prototypes.items.shiftite")
 require("__janus__.prototypes.items.time_distorter")
 require("__janus__.prototypes.items.time_science")
 
+-- tiles
+require("__janus__.prototypes.tiles.shiftite_tile")
+
 -- entities
 require("__janus__.prototypes.entities.time_distorter")
 require("__janus__.prototypes.entities.shiftite-ore")
