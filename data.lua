@@ -23,3 +23,6 @@ require("__janus__.prototypes.recipes.recipes")
 
 -- technologies
 require("__janus__.prototypes.technologies.technologies")
+
+-- tips and tricks
+require("__janus__.prototypes.tips_tricks.tips_tricks")
