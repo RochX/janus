@@ -1,0 +1,55 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-01-08
+  Info:
+    - add initial info and thumbnail
+  Features:
+    - add advanced resources recipes from shiftite
+    - add basic technologies for time science
+    - add collision layer for shiftite ore
+    - add custom tile that every ore patch sits on
+    - add planet Janus
+    - add resource generation to planet Janus
+    - add rocks to get some base resources without shiftite
+    - add surface properties to Janus
+    - add technologies/recipes to get vulcanus and fulgora resources
+    - add technology for science replication
+    - add test shiftite items that implement the spoilage loop
+    - add time distorter building where all shiftite recipes are made
+    - add time science pack item with temp graphics
+    - add tips and tricks items for janus
+    - implement custom map generation for shiftite ore
+    - recipe for basic resources (iron/copper/etc) from shiftite
+  Gui:
+    - add groups/subgroups to sort recipes in the gui
+    - add shiftite items to a subgroup
+    - put the time distorter into its own subgroup
+    - set subgroup of shiftite ore to show up in Janus group within
+  Balancing:
+    - add time science pack to endgame techs
+    - change basic resources from shiftite to remove ore
+    - set spoil time of shiftite to be more reasonable
+    - time science now requires a containment unit intermediate
+    - update what collides with shiftite
+  Bugfixes:
+    - add more exceptions to shiftite ore collision layer
+    - fixed weird ordering of tech tree
+  Graphics:
+    - add letter over ore image for shiftite alpha and beta
+    - add placeholder icons for shiftite forms
+    - add temp graphics for time distorter
+    - add updated planet icon and mod thumbnail
+    - let space age define icon for Janus space connection
+    - rest of shiftite graphics; updated technology graphics
+  Locale:
+    - add locale to everything up to this point
+    - add names for shiftite and basic recipes
+    - update missing recipe names/descriptions
+  Changes:
+    - add MacOS .DS_Store to gitignores
+    - fix info.json from 2.0 to 2.0.28 for SA dep
+    - ignore notes file for conventional commits
+    - refactor prototype file structure
+    - update info.json with renamed repo name
+    - update README to remove factorio mod template info with a disclaimer
+    - update releaserc to skip validation; hopefully the action works
