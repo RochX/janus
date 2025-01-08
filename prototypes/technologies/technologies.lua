@@ -9,7 +9,7 @@ table.insert(technologies, {
   icon_size = 256,
   icons = {
     {
-      icon = helper.sprite "planet_icon.png",
+      icon = helper.sprite "janus-icon.png",
       icon_size = 1024
     },
     {

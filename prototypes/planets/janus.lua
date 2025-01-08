@@ -42,9 +42,9 @@ janus = {
   distance = 15,
   orientation = 0.4,
   asteroid_spawn_definitions = gleba_asteroids,
-  icon = helper.sprite "planet_icon.png",
+  icon = helper.sprite "janus-icon.png",
   icon_size = 1024,
-  starmap_icon = helper.sprite "planet_icon.png",
+  starmap_icon = helper.sprite "janus-icon.png",
   starmap_icon_size = 1024,
 
   map_gen_settings = janus_map_gen_settings(),
