@@ -8,8 +8,8 @@ local time_distorter_entity = {
   icon_size=64,
   crafting_speed=1,
   crafting_categories={"janus-shiftite"},
-  energy_usage = "90kW",
-  energy_source = {type = "void"},
+  energy_usage = "1MW",
+  energy_source = {type = "electric", usage_priority = "secondary-input"},
 
   minable={mining_time=0.5, result="janus-time-distorter"},
 
@@ -48,6 +48,13 @@ local time_distorter_entity = {
           width = 64
         }
       }
+    }
+  },
+
+  surface_conditions = {
+    {
+      property = "instability",
+      min = 99
     }
   }
 }

@@ -1,6 +1,12 @@
 local helper = require("__janus__.prototypes.helper")
 local planet_map_gen = require("__base__/prototypes/planet/planet-map-gen")
 
+data:extend({{
+  type = "surface-property",
+  name = "instability",
+  default_value = 0
+}})
+
 gleba_asteroids = table.deepcopy(data.raw['planet']['gleba'].asteroid_spawn_definitions)
 nauvis_fulgora_asteroids = table.deepcopy(data.raw['space-connection']['nauvis-fulgora'].asteroid_spawn_definitions)
 
@@ -33,7 +39,7 @@ janus = {
   name = "janus",
   subgroup = "janus-planet-info",
   gravity_pull = 10,
-  distance = 30,
+  distance = 15,
   orientation = 0.4,
   asteroid_spawn_definitions = gleba_asteroids,
   icon = helper.sprite "planet_icon.png",
@@ -41,7 +47,18 @@ janus = {
   starmap_icon = helper.sprite "planet_icon.png",
   starmap_icon_size = 1024,
 
-  map_gen_settings = janus_map_gen_settings()
+  map_gen_settings = janus_map_gen_settings(),
+  pollutant_type = nil,
+  solar_power_in_space = 400,
+  surface_properties = {
+    ["day-night-cycle"] = 1.5 * minute,
+    ["instability"] = 100,
+    ["solar-power"] = 100,
+    -- apparently robot drain multiplier is equal to 100 * gravity / pressure, so this gives us 2x drain as desired
+    -- this is not documented from what I could find; credit to factorio discord.
+    gravity = 20,
+    pressure = 1000
+  }
 }
 
 planet_map_gen.janus = janus_map_gen_settings
