@@ -5,7 +5,8 @@ data:extend({
   {
     type="tool",
     name="janus-time-science-pack",
-    subgroup="janus-time-science",
+    subgroup="science-pack", -- as much as I want to keep this in the janus-time-science subgroup, tech tree is ordered weird if I don't do this; see https://forums.factorio.com/viewtopic.php?p=314699#p314699
+    order = "j-a",
     icons={
       {
         icon=helper.sprite "time_science.png",
@@ -15,7 +16,6 @@ data:extend({
     },
     stack_size=200,
     weight=1000,
-    order = "a[time-science-pack]",
 
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",
