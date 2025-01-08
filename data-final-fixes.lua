@@ -26,9 +26,7 @@ end
 
 -- -- add the shiftite ore collision layer to certain buildable entities
 collision_mask_defaults = require("collision-mask-defaults")
-shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargo-wagon", "character", "character-corpse", 'construction-robot', "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "locomotive", "logistic-robot", "mining-drill", "particle-source", "projectile", "rail-ramp", "rail-support", "resource", "smoke-with-trigger", "speech-bubble","spider-leg", "tile-ghost"}
-
--- TODO: make rail ramps and supports still collide with shiftite even after fulgora oil supports are researched
+shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargo-wagon", "character", "character-corpse", 'construction-robot', "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "land-mine", "locomotive", "logistic-robot", "mining-drill", "particle-source", "projectile", "rail-ramp", "rail-support", "resource",  "simple-entity", "smoke-with-trigger", "speech-bubble","spider-leg", "tile-ghost"}
 
 for k, _ in pairs(defines.prototypes['entity']) do
   -- skip exceptions
@@ -39,15 +37,13 @@ for k, _ in pairs(defines.prototypes['entity']) do
   if data.raw[k] then
     -- loop through each entity of type k
     for _, v in pairs(data.raw[k]) do
-      log(v.name)
-
       -- add shiftite layer to existing collision_mask if one exists
       if v.collision_mask then
-        log("Modified collision mask of "..v.name)
+        log("Modified collision mask of "..v.name.." which is in data.raw["..k.."]")
         v.collision_mask.layers["janus_shiftite_layer"] = true
       -- otherwise add shiftite layer to the default layer
       elseif collision_mask_defaults[k] then
-        log("Modified default collision mask of "..v.name)
+        log("Modified default collision mask of "..v.name.." which is in data.raw["..k.."]")
         v.collision_mask = collision_mask_defaults[k]
         v.collision_mask.layers["janus_shiftite_layer"] = true
       end
