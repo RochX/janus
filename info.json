@@ -15,5 +15,9 @@
   "spoiling_required": true,
   "freezing_required": false,
   "segmented_units_required": false,
-  "expansion_shaders_required": false
+  "expansion_shaders_required": false,
+  "package": {
+    "readme": "README.md",
+    "sync_portal_details": true
+  }
 }
