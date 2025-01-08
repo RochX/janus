@@ -4,6 +4,10 @@ data:extend({
   {
     type = "collision-layer",
     name = "janus_shiftite_layer"
+  },
+  {
+    type = "collision-layer",
+    name = "janus_shiftite_tile_layer"
   }
 })
 
@@ -41,7 +45,10 @@ shiftite_ore = {
     }
   },
 
-  collision_mask = {layers = {resource=true, janus_shiftite_layer=true}}
+  collision_mask = {layers = {
+    resource=true, 
+    -- janus_shiftite_layer=true
+  }}
 }
 
 -- autoplace

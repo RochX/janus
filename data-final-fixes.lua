@@ -26,7 +26,9 @@ end
 
 -- -- add the shiftite ore collision layer to certain buildable entities
 collision_mask_defaults = require("collision-mask-defaults")
-shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargon-wagon", "character", "character-corpse", "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "locomotive", "mining-drill", "particle-source", "projectile", "smoke-with-trigger", "speech-bubble","spider-leg", "tile-ghost"}
+shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargo-wagon", "character", "character-corpse", "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "locomotive", "mining-drill", "particle-source", "projectile", "rail-ramp", "rail-support", "resource", "smoke-with-trigger", "speech-bubble","spider-leg", "tile-ghost"}
+
+-- TODO: make rail ramps and supports still collide with shiftite even after fulgora oil supports are researched
 
 for k, _ in pairs(defines.prototypes['entity']) do
   -- skip exceptions
@@ -52,4 +54,24 @@ for k, _ in pairs(defines.prototypes['entity']) do
     end
   end
     ::continue::
+end
+
+-- handle concrete tile collision
+-- note that for tile collision from a placed item, you edit the condition on the *item* that places the tile, not the tile itself.
+concretes = {"stone-brick", "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete"}
+
+for _,v in pairs(concretes) do
+  c = data.raw['item'][v]
+  
+  log(v)
+
+  if c.place_as_tile then
+    if c.place_as_tile.condition then
+      c.place_as_tile.condition.layers["janus_shiftite_tile_layer"] = true
+    else
+      c.place_as_tile.condition = {layers={janus_shiftite_tile_layer=true}}
+    end
+  else
+    log("WARN: Attempted to add collision layer to item "..v.." which doesn't place a tile!")
+  end
 end

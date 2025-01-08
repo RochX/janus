@@ -8,6 +8,9 @@ shiftite_tile.subgroup = "janus-planet-info"
 shiftite_tile.autoplace = {probability_expression = shiftite_ore.autoplace.probability_expression}
 shiftite_tile.map_color = {r=0.322,g=0.009,b=0.056}
 
+shiftite_tile.collision_mask.layers.janus_shiftite_layer=true
+shiftite_tile.collision_mask.layers.janus_shiftite_tile_layer=true
+
 shiftite_tile.variants = helper.tile_variations_template(
   "__janus__/graphics/tiles/shiftite_tile.png", "__base__/graphics/terrain/masks/transition-3.png",
   {
