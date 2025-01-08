@@ -10,4 +10,4 @@ I'm not a graphic designer or an artist so currently many graphics are placehold
 Mod thumbnail and planet icon were generated with AI tools.
 Hopefully it'll be better art created by a real person soonTM.
 
-If you have any suggestions or ideas feel free to open an issue on GitHub [here](https://github.com/RochX/Janus/issues).
+If you have any suggestions or ideas feel free to open an issue on GitHub [here](https://github.com/RochX/janus/issues).
