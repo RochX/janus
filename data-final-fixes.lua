@@ -26,7 +26,7 @@ end
 
 -- -- add the shiftite ore collision layer to certain buildable entities
 collision_mask_defaults = require("collision-mask-defaults")
-shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargo-wagon", "character", "character-corpse", "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "locomotive", "mining-drill", "particle-source", "projectile", "rail-ramp", "rail-support", "resource", "smoke-with-trigger", "speech-bubble","spider-leg", "tile-ghost"}
+shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargo-wagon", "character", "character-corpse", 'construction-robot', "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "locomotive", "logistic-robot", "mining-drill", "particle-source", "projectile", "rail-ramp", "rail-support", "resource", "smoke-with-trigger", "speech-bubble","spider-leg", "tile-ghost"}
 
 -- TODO: make rail ramps and supports still collide with shiftite even after fulgora oil supports are researched
 
