@@ -26,3 +26,6 @@ require("__janus__.prototypes.technologies.technologies")
 
 -- tips and tricks
 require("__janus__.prototypes.tips_tricks.tips_tricks")
+
+-- compatibility
+require("__janus__.compatibility.space-connections")
