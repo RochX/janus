@@ -4,7 +4,7 @@
   "title": "Janus",
   "author": "RochX",
   "homepage": "https://github.com/RochX/janus",
-  "description": "Adds a new planet, Janus, with a new constantly shifting resource.",
+  "description": "Adds a new planet, Janus, with a new constantly shifting resource. Note: most graphics currently placeholder.",
   "factorio_version": "2.0",
   "dependencies": [
     "space-age >= 2.0.28"
