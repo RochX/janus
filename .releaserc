@@ -60,12 +60,7 @@
                 }
             }
         ],
-        [
-          "semantic-release-factorio",
-          {
-              "skip_validation": true
-          }
-        ],
+        "semantic-release-factorio",
         [
             "@semantic-release/github",
             {
