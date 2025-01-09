@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 2025-01-09
+  Gui:
+    - place Janus with other planets in the Factoriopedia
+  Balancing:
+    - make mineral rocks spawn more frequently
+  Compatibility:
+    - add space connections between maraxsis and tenebris if installed
+  Locale:
+    - add description to Janus on the space map
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 2025-01-08
   Bugfixes:
