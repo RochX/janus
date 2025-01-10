@@ -24,17 +24,12 @@ end
 
 
 
--- -- add the shiftite ore collision layer to certain buildable entities
+-- add the shiftite ore collision layer to certain buildable entities
 collision_mask_defaults = require("collision-mask-defaults")
-shiftite_collision_exceptions = {"arrow", "artillery-flare", "artillery-projectile", "artillery-wagon", "beam", "cargo-pod", "cargo-wagon", "character", "character-corpse", 'construction-robot', "corpse", "deconstructible-tile-proxy", "elevated-curved-rail-a", "elevated-curved-rail-b", "elevated-half-diagonal-rail", "elevated-straight-rail", "entity-ghost", "explosion", "fire", "fluid-wagon", "highlight-box", "item-entity", "item-request-proxy", "land-mine", "locomotive", "logistic-robot", "mining-drill", "particle-source", "projectile", "rail-ramp", "rail-support", "resource", "simple-entity", "smoke-with-trigger", "speech-bubble","spider-leg", "temporary-container", "tile-ghost"}
+shiftite_collision_categories = {'accumulator', 'ammo-turret', 'arithmetic-combinator', 'artillery-turret', 'assembling-machine', 'beacon', 'boiler', 'burner-generator', 'cargo-bay', 'cargo-landing-pad', 'constant-combinator', 'container', 'curved-rail-a', 'curved-rail-b', 'decider-combinator', 'display-panel', 'electric-energy-interface', 'electric-pole', 'electric-turret', 'fluid-turret', 'furnace', 'fusion-generator', 'fusion-reactor', 'gate', 'generator', 'half-diagonal-rail', 'heat-interface', 'heat-pipe', 'infinity-container', 'infinity-pipe', 'inserter', 'lab', 'lamp', 'land-splitter', 'legacy-curved-rail', 'legacy-straight-rail', 'lightning-attractor', 'linked-belt', 'linked-container', 'loader', 'loader-1x1', 'logistic-container', 'market', 'pipe', 'pipe-to-ground', 'power-switch', 'programmable-speaker', 'pump', 'radar', 'reactor', 'roboport', 'rocket-silo', 'selector-combinator', 'solar-panel', 'space-platform-hub', 'splitter', 'storage-tank', 'straight-rail', 'thruster', 'train-stop', 'transport-belt', 'turret', 'underground-belt', 'wall'}
 
 for k, _ in pairs(defines.prototypes['entity']) do
-  -- skip exceptions
-  if contains(shiftite_collision_exceptions, k) then
-    goto continue
-  end
-
-  if data.raw[k] then
+  if contains(shiftite_collision_categories, k) and data.raw[k] then
     -- loop through each entity of type k
     for _, v in pairs(data.raw[k]) do
       -- add shiftite layer to existing collision_mask if one exists
@@ -49,7 +44,6 @@ for k, _ in pairs(defines.prototypes['entity']) do
       end
     end
   end
-    ::continue::
 end
 
 -- handle concrete tile collision
