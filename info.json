@@ -8,7 +8,7 @@
   "factorio_version": "2.0",
   "dependencies": [
     "space-age >= 2.0.28",
-    "PlanetsLib >= 1.1.13"
+    "PlanetsLib >= 1.1.21"
   ],
   "quality_required": false,
   "rail_bridges_required": true,
