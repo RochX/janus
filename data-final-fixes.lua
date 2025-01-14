@@ -18,8 +18,12 @@ end
 local science_to_update = {"promethium-science-pack", "research-productivity"}
 
 for _, tech in pairs(science_to_update) do
-  table.insert(data.raw["technology"][tech].unit.ingredients, {"janus-time-science-pack", 1})
-  table.insert(data.raw["technology"][tech].prerequisites, "janus-time-science-pack")
+  if data.raw['technology'][tech] then
+    table.insert(data.raw["technology"][tech].unit.ingredients, {"janus-time-science-pack", 1})
+    table.insert(data.raw["technology"][tech].prerequisites, "janus-time-science-pack")
+  else
+    log("Technology "..tech.." doesn't exist.")
+  end
 end
 
 
@@ -65,3 +69,6 @@ for _,v in pairs(concretes) do
     log("WARN: Attempted to add collision layer to item "..v.." which doesn't place a tile!")
   end
 end
+
+-- compatibility final fixes
+require("__janus__.compatibility.final-fixes.technologies")
