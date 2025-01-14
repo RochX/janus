@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 2025-01-14
+  Compatibility:
+    - fix crash with Rocs-Hardcore-Delayed-Tech-Tree
+  Changes:
+    - migrate planet creation to PlanetsLib
+    - set default import location of Janus products to Janus
+    - set PlanetsLib dep to be most recent version
+---------------------------------------------------------------------------------------------------
 Version: 1.0.8
 Date: 2025-01-10
   Bugfixes:
