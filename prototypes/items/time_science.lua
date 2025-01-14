@@ -16,6 +16,7 @@ data:extend({
     },
     stack_size=200,
     weight=1000,
+    default_import_location = "janus",
 
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",

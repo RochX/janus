@@ -22,6 +22,7 @@ local function create_shiftite(ore_name, spoil_to, spoil_time)
     stack_size = 50,
     subgroup = "janus-shiftite",
     weight=2000,
+    default_import_location = "janus",
 
     -- icon layering
     icons = {
