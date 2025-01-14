@@ -33,6 +33,7 @@ janus_map_gen_settings = function()
     }
   }
 end
+planet_map_gen.janus = janus_map_gen_settings
 
 janus = {
   type = "planet",
@@ -40,8 +41,14 @@ janus = {
   subgroup = "planets",
   order = "d[janus]",
   gravity_pull = 10,
-  distance = 15,
-  orientation = 0.4,
+  orbit = {
+    parent = {
+      type = "space-location",
+      name = "star"
+    },
+    distance = 15,
+    orientation = 0.4
+  },
   asteroid_spawn_definitions = gleba_asteroids,
   icon = helper.sprite "janus-icon.png",
   icon_size = 1024,
@@ -62,7 +69,7 @@ janus = {
   }
 }
 
-planet_map_gen.janus = janus_map_gen_settings
+log(serpent.block(janus.orbit))
 
 janus_connection = {
   type = "space-connection",
@@ -75,4 +82,6 @@ janus_connection = {
   length = 15000
 }
 
-data:extend({janus, janus_connection})
+PlanetsLib:extend({janus})
+
+data:extend({janus_connection})
