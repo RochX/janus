@@ -1,5 +1,6 @@
 local helper = require("__janus__.prototypes.helper")
 local planet_map_gen = require("__base__/prototypes/planet/planet-map-gen")
+local nauvis = data.raw['planet']['nauvis']
 
 data:extend({{
   type = "surface-property",
@@ -82,6 +83,7 @@ janus_connection = {
   length = 15000
 }
 
+PlanetsLib.borrow_music(nauvis, janus)
 PlanetsLib:extend({janus})
 
 data:extend({janus_connection})
