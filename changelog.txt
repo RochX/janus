@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 2025-01-19
+  Bugfixes:
+    - prevent recycling from using shiftite recipes
+    - shiftite layer no longer added to entities with no collision
+  Changes:
+    - add nauvis music to janus
+---------------------------------------------------------------------------------------------------
 Version: 1.0.9
 Date: 2025-01-14
   Compatibility:
