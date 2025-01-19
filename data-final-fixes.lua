@@ -38,8 +38,13 @@ for k, _ in pairs(defines.prototypes['entity']) do
     for _, v in pairs(data.raw[k]) do
       -- add shiftite layer to existing collision_mask if one exists
       if v.collision_mask then
-        log("Modified collision mask of "..v.name.." which is in data.raw["..k.."]")
-        v.collision_mask.layers["janus_shiftite_layer"] = true
+        -- and only if the existing collision_mask is none empty
+        -- nesting the if matters since some mods want the collision mask to be empty when default is not.
+        if next(v.collision_mask.layers) then
+          log("Collision mask before modification is "..v.name.." is "..serpent.block(v.collision_mask))
+          log("Modified collision mask of "..v.name.." which is in data.raw["..k.."]")
+          v.collision_mask.layers["janus_shiftite_layer"] = true
+        end
       -- otherwise add shiftite layer to the default layer
       elseif collision_mask_defaults[k] then
         log("Modified default collision mask of "..v.name.." which is in data.raw["..k.."]")
