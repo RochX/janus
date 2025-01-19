@@ -90,7 +90,8 @@ base_resources = {
     results={{type="item", name="iron-plate", amount=5}},
     energy_required = 2.5,
     order="a",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   },
   {
     type="recipe",
@@ -101,7 +102,8 @@ base_resources = {
     results={{type="item", name="copper-plate", amount=5}},
     energy_required = 2.5,
     order="b",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   },
   {
     type="recipe",
@@ -112,7 +114,8 @@ base_resources = {
     results={{type="item", name="stone", amount=5}},
     energy_required = 2.5,
     order="c",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   },
   {
     type="recipe",
@@ -123,7 +126,8 @@ base_resources = {
     results={{type="fluid", name="water", amount=100}},
     energy_required = 1,
     order="d",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   },
   {
     type="recipe",
@@ -134,7 +138,8 @@ base_resources = {
     results={{type="item", name="coal", amount=5}},
     energy_required = 2.5,
     order="e",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   },
   {
     type="recipe",
@@ -145,7 +150,8 @@ base_resources = {
     results={{type="fluid", name="crude-oil", amount=100}},
     energy_required = 1,
     order="f",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   },
   {
     type="recipe",
@@ -159,7 +165,8 @@ base_resources = {
     results={{type="item", name="concrete", amount=5}},
     energy_required = 2.5,
     order="g",
-    enabled=false
+    enabled=false,
+    auto_recycle=false
   }
 }
 
@@ -191,7 +198,8 @@ local function shiftite_to_X_recipe(params)
     results = {results},
     energy_required = energy_required,
     enabled = false,
-    result_is_always_fresh = true
+    result_is_always_fresh = true,
+    auto_recycle=false
   }
 end
 
