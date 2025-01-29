@@ -4,10 +4,15 @@ local helper = require("__janus__.prototypes.helper")
 data:extend({{
   type = "item",
   name = "janus-containment-unit",
-  icon = helper.sprite "containment-unit.png",
   subgroup = "janus-time-science",
   order = "b[containment-unit]",
-  icon_size = 64,
+  icons = {
+    {
+      icon=helper.sprite "containment-unit.png",
+      icon_size=1024,
+      scale=0.05
+    }
+  },
   stack_size = 100,
   weight = 5000
 }})
