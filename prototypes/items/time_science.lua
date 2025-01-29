@@ -9,9 +9,9 @@ data:extend({
     order = "j-a",
     icons={
       {
-        icon=helper.sprite "time_science.png",
-        icon_size=64,
-        tint={r=1,g=0,b=1, a=0.333}
+        icon=helper.sprite "time-science.png",
+        icon_size=1024,
+        scale=0.05
       }
     },
     stack_size=200,

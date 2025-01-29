@@ -11,3 +11,7 @@ Mod thumbnail and planet icon were generated with AI tools.
 Hopefully it'll be better art created by a real person soonTM.
 
 If you have any suggestions or ideas feel free to open an issue on GitHub [here](https://github.com/RochX/janus/issues).
+
+## Credits
+### Graphics
+- [https://github.com/malcolmriley/unused-renders](https://github.com/malcolmriley/unused-renders) for shiftite containment unit graphic. Time science graphic is a modified version of the containment unit graphic, modified by me.
