@@ -78,7 +78,7 @@ table.insert(technologies, {
   type = "technology",
   name = "janus-time-distorter",
   icon = helper.sprite "time_distorter.png",
-  icon_size = 64,
+  icon_size = 200,
   effects = {
     {type = "unlock-recipe", recipe = "janus-time-distorter"},
     {type = "unlock-recipe", recipe = "janus-shiftite-to-iron"},
