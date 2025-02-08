@@ -18,6 +18,9 @@
   "segmented_units_required": false,
   "expansion_shaders_required": false,
   "package": {
+    "gallery": [
+      "gallery/**.jpg"
+    ],
     "readme": "README.md",
     "sync_portal_details": true
   }
