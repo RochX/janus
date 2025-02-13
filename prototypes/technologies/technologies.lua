@@ -355,6 +355,54 @@ table.insert(technologies, {
   prerequisites = {"janus-time-science-pack", "janus-simple-science-replication"}
 })
 
+-- time-shifted items
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-time-shifted",
+  icon = "__janus__/graphics/time-shifted/time-shifted-tech.png",
+  icon_size = 1024,
+  unit = {
+    count = 1000,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 60
+  },
+  prerequisites = {"janus-time-science-pack"}
+})
+
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-fast-inserter",
+  icon = "__janus__/graphics/time-shifted/inserter/time-shifted-fast-inserter.png",
+  icon_size = 256,
+  effects = {
+    {type="unlock-recipe", recipe="janus-fast-inserter"}
+  },
+  unit = {
+    count = 750,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 30
+  },
+  prerequisites = {"janus-time-shifted"}
+})
+
 -- ordering
 for i, tech in ipairs(technologies) do
   tech.order = tostring(i)
