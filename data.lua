@@ -20,6 +20,9 @@ require("__janus__.prototypes.entities.time-shifted.time-shifted")
 -- planet
 require("__janus__.prototypes.planets.janus")
 
+-- modules
+require("__janus__.prototypes.modules.modules")
+
 -- recipes
 require("__janus__.prototypes.recipes.recipes")
 require("__janus__.prototypes.recipes.time-shifted")
