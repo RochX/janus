@@ -19,6 +19,7 @@ subgroups_names = {
   "janus-interplanetary-from-shiftite",
   "janus-transform-shiftite", 
   "janus-time-distorter-subgroup",
+  "janus-time-shifted",
   "janus-time-science",
   "janus-science-replication",
   "janus-planet-info"

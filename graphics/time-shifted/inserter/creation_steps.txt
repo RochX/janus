@@ -1,0 +1,8 @@
+These graphics were created with the following steps:
+- Take the base fast inserter graphics and open in GIMP.
+- Then for each image do the following:
+- Select All
+- Use Colors > Hue-Saturation
+- Select Cyan
+- Set Overlap = 100, Hue = 70, rest = 0.
+- Repeat until done on all images.
