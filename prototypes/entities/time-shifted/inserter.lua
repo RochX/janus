@@ -7,6 +7,7 @@ fast_inserter_time_shifted.name = "janus-fast-inserter"
 fast_inserter_time_shifted.insert_position = {1.2, 0}
 fast_inserter_time_shifted.subgroup = "janus-time-shifted"
 fast_inserter_time_shifted.minable.result = "janus-fast-inserter"
+fast_inserter_time_shifted.next_upgrade = nil
 fast_inserter_time_shifted.allow_custom_vectors = true
 
 fast_inserter_time_shifted.hand_base_picture.filename = "__janus__/graphics/time-shifted/inserter/time-shifted-fast-inserter-hand-base.png"
