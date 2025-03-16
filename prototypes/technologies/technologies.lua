@@ -403,6 +403,32 @@ table.insert(technologies, {
   prerequisites = {"janus-time-shifted"}
 })
 
+table.insert(technologies, {
+  type = "technology",
+  name = "janus-thruster",
+  icon = "__janus__/graphics/time-shifted/thruster/janus-thruster.png",
+  icon_size = 256,
+  effects = {
+    {type="unlock-recipe", recipe="janus-thruster"},
+    {type="unlock-recipe", recipe="janus-thruster-fuel"}
+  },
+  unit = {
+    count = 1500,
+    ingredients = {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"military-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"space-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"janus-time-science-pack", 1}
+    },
+    time = 30
+  },
+  prerequisites = {"janus-time-shifted"}
+})
+
 -- ordering
 for i, tech in ipairs(technologies) do
   tech.order = tostring(i)
